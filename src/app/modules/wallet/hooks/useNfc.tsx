@@ -26,6 +26,7 @@ export const useNfc = (nextFunction: () => Promise<void>) => {
       });
 
       ndef.addEventListener("reading", (event: any) => {
+        console.log("event", event);
         const { message, serialNumber } = event;
 
         // setNfcMessage(message);
